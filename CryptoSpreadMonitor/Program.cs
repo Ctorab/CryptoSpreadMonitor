@@ -64,7 +64,7 @@ internal class Program
             var spreadA = ((bestAskA - bestBidA) / bestBidA) * 100;
 
             ConsoleOrderbook.DrawText(g, 0, 15, $"Ask: {bestAskA}");
-            ConsoleOrderbook.DrawText(g, 0, 30, $"Spead: {spreadA.ToString("0.00")}%");
+            ConsoleOrderbook.DrawText(g, 0, 30, $"Spread: {spreadA.ToString("0.00")}%");
             ConsoleOrderbook.DrawText(g, 0, 45, $"Bid: {bestBidA}");
 
             var bestBidB = _marketState.ExchangeB.OrderBook.Bids.Keys.Max();
@@ -73,7 +73,7 @@ internal class Program
 
             ConsoleOrderbook.DrawText(g, 0, 70, _marketState.ExchangeB.ExchangeName, true);
             ConsoleOrderbook.DrawText(g, 0, 85, $"Ask: {bestAskB}");
-            ConsoleOrderbook.DrawText(g, 0, 100, $"Spead: {spreadB.ToString("0.00")}%");
+            ConsoleOrderbook.DrawText(g, 0, 100, $"Spread: {spreadB.ToString("0.00")}%");
             ConsoleOrderbook.DrawText(g, 0, 115, $"Bid: {bestBidB}");
         }, 150, 500);
 
